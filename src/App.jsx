@@ -14,6 +14,7 @@ import AIHealthAssistant from "./components/Patient/AIHealthAssistant";
 import HealthRecords from "./components/Patient/HealthRecords";
 import Appointments from "./components/Patient/Appointments";
 import VideoConsultationPatient from "./components/Patient/VideoConsultation.jsx";
+import MedicineTracker from "./components/Patient/MedicineTracker";
 
 // Doctor Components
 import DoctorDashboard from "./components/Doctor/Dashboard";
@@ -58,6 +59,7 @@ function App() {
             <Route path="/patient/ai-assistant" element={<AIHealthAssistant />} />
             <Route path="/patient/health-records" element={<HealthRecords />} />
             <Route path="/patient/appointments" element={<Appointments />} />
+            <Route path="/patient/medicine-tracker" element={<MedicineTracker />} />
             <Route path="/patient/video" element={<VideoConsultationPatient />} />
 
             {/* Doctor Routes */}

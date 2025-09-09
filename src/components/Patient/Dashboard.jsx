@@ -8,7 +8,8 @@ import {
   BellIcon, 
   ChartBarIcon, 
   CogIcon, 
-  StarIcon 
+  StarIcon,
+  BeakerIcon
 } from "@heroicons/react/24/outline";
 
 export default function PatientDashboard() {
@@ -62,6 +63,15 @@ export default function PatientDashboard() {
       route: "/patient/health-records",
       gradient: "from-red-500 to-pink-600",
       stats: "12 records"
+    },
+    {
+      id: "medicine-tracker",
+      title: "Medicine Availability",
+      description: "Check medicine stock at nearby pharmacies",
+      icon: BeakerIcon,
+      route: "/patient/medicine-tracker",
+      gradient: "from-green-500 to-emerald-600",
+      stats: "15 pharmacies"
     },
     {
       id: "symptom-checker",
@@ -175,7 +185,7 @@ export default function PatientDashboard() {
         {/* Dashboard Cards */}
         <div className="lg:col-span-2">
           <h2 className="text-2xl font-bold text-black mb-6">Health Management</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
             {dashboardCards.map((card, index) => {
               const IconComponent = card.icon;
               return (
